@@ -12,7 +12,7 @@ public class KafkaBoilerConsumer {
                 StreamExecutionEnvironment.getExecutionEnvironment();
 
         Properties props = new Properties();
-        props.setProperty("bootstrap.servers", "kafka:9092");
+        props.setProperty("bootstrap.servers", "kafka:29092");
         props.setProperty("group.id", "flink-boiler");
 
         FlinkKafkaConsumer<String> consumer =
