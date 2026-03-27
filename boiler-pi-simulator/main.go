@@ -10,7 +10,7 @@ import (
 func main() {
 	fmt.Println("--- Simulator Manual Check ---")
 
-	events := simulator.GenerateEvents()
+	events := simulator.GenerateBoilerEvents() // []model.SensorEvent
 
 	for _, event := range events {
 		fmt.Printf("Tag: %d | Value: %.2f | Quality: %d | Time: %s\n",

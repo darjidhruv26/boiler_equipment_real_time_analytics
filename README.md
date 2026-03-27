@@ -49,7 +49,7 @@ CREATE DATABASE IF NOT EXISTS industrial_analytics;
 
 USE industrial_analytics;
 
-CREATE TABLE IF NOT EXISTS sensor_timeseries
+CREATE TABLE IF NOT EXISTS tag_timeseries
 (
     `event_time` DateTime,
     `pi_point_id` UInt32,
@@ -105,4 +105,4 @@ cd boiler-pi-simulator/producer/
 go run .
 ```
 
-Your real-time pipeline is now active. You can query the `sensor_timeseries` and `sensor_metadata` tables in ClickHouse to verify that data is being ingested and to perform analytics.
+Your real-time pipeline is now active. You can query the `tag_timeseries` and `sensor_metadata` tables in ClickHouse to verify that data is being ingested and to perform analytics.
