@@ -56,7 +56,7 @@ public class KafkaToClickHouse {
 
                                 // Support both event_time and older timestamp formats
                                 String ts = node.has("event_time") ? node.get("event_time").asText() : 
-                                                (node.has("timestamp") ? node.get("timestamp").asText() : java.time.Instant.now().toString());
+                                        (node.has("timestamp") ? node.get("timestamp").asText() : java.time.Instant.now().toString());
 
                                 Timestamp t =
                                         Timestamp.from(
@@ -80,8 +80,8 @@ public class KafkaToClickHouse {
                         },
 
                         JdbcExecutionOptions.builder()
-                                .withBatchSize(1000)
-                                .withBatchIntervalMs(2000)
+                                .withBatchSize(5000)
+                                .withBatchIntervalMs(5000)
                                 .build(),
                         new JdbcConnectionOptions.JdbcConnectionOptionsBuilder()
                                 .withUrl("jdbc:clickhouse://clickhouse:8123/industrial_analytics?user=admin&password=admin")
