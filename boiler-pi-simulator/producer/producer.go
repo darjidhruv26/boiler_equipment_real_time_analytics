@@ -433,7 +433,7 @@ func runCoolingTowerProducer(ctx context.Context, wg *sync.WaitGroup) {
 					fmt.Println("Cooling Tower JSON error:", err)
 					continue
 				}
-				fmt.Printf("[Cooling Tower] Produced: %s\n", string(msgBytes))
+				// fmt.Printf("[Cooling Tower] Produced: %s\n", string(msgBytes))
 
 				msgs = append(msgs, kafka.Message{
 					Key:   []byte(fmt.Sprint(event.PIPointID)),
@@ -595,7 +595,7 @@ func runTurbineProducer(ctx context.Context, wg *sync.WaitGroup) {
 					fmt.Println("Turbine JSON error:", err)
 					continue
 				}
-				fmt.Printf("[Turbine] Produced: %s\n", string(msgBytes))
+				// fmt.Printf("[Turbine] Produced: %s\n", string(msgBytes))
 
 				msgs = append(msgs, kafka.Message{
 					Key:   []byte(fmt.Sprint(event.PIPointID)),

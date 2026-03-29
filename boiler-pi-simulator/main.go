@@ -14,6 +14,6 @@ func main() {
 
 	for _, event := range events {
 		fmt.Printf("Tag: %d | Value: %.2f | Quality: %d | Time: %s\n",
-			event.PIPointID, event.Value, event.Quality, event.Timestamp.Format(time.RFC3339))
+			event.PIPointID, event.Value, event.Quality, event.EventTime.Format(time.RFC3339))
 	}
 }

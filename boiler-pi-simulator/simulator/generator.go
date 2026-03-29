@@ -172,7 +172,7 @@ func generateValue(unit string) interface{} {
 
 func GenerateBoilerEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC()
 
 	for _, t := range config.BoilerTags {
 		events = append(events, model.SensorEvent{
@@ -191,7 +191,7 @@ func GenerateBoilerEvents() []model.SensorEvent {
 
 func GenerateTurbineEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.TurbineTags {
 		events = append(events, model.SensorEvent{
@@ -210,7 +210,7 @@ func GenerateTurbineEvents() []model.SensorEvent {
 
 func GenerateGeneratorEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.GeneratorTags {
 		events = append(events, model.SensorEvent{
@@ -229,7 +229,7 @@ func GenerateGeneratorEvents() []model.SensorEvent {
 
 func GenerateCondenserEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.CondenserTags {
 		events = append(events, model.SensorEvent{
@@ -248,7 +248,7 @@ func GenerateCondenserEvents() []model.SensorEvent {
 
 func GenerateCoolingTowerEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.CoolingTowerTags {
 		events = append(events, model.SensorEvent{
@@ -267,7 +267,7 @@ func GenerateCoolingTowerEvents() []model.SensorEvent {
 
 func GenerateCoalHandlingEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.CoalHandlingTags {
 		events = append(events, model.SensorEvent{
@@ -286,7 +286,7 @@ func GenerateCoalHandlingEvents() []model.SensorEvent {
 
 func GenerateAshHandlingEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.AshHandlingTags {
 		events = append(events, model.SensorEvent{
@@ -305,7 +305,7 @@ func GenerateAshHandlingEvents() []model.SensorEvent {
 
 func GenerateWaterTreatmentEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.WaterTreatmentTags {
 		events = append(events, model.SensorEvent{
@@ -324,7 +324,7 @@ func GenerateWaterTreatmentEvents() []model.SensorEvent {
 
 func GenerateElectricalSystemEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.ElectricalSystemTags {
 		events = append(events, model.SensorEvent{
@@ -343,7 +343,7 @@ func GenerateElectricalSystemEvents() []model.SensorEvent {
 
 func GenerateInstrumentationControlEvents() []model.SensorEvent {
 	var events []model.SensorEvent
-	now := time.Now().UTC().Format("2006-01-02T15:04:05.000Z") // UTC matching standard
+	now := time.Now().UTC() // UTC matching standard
 
 	for _, t := range config.InstrumentationControlTags {
 		events = append(events, model.SensorEvent{
