@@ -405,7 +405,7 @@ This document contains the complete list of *Boiler* equipment and sensors metad
 | 1939 | Safety and Protection | BOILER_SHUTDOWN_REASON | State | Boiler Shutdown Reason |
 | 1940 | Safety and Protection | BOILER_EVENT_LOG_STATUS | State | Boiler Event Log Status |
 
-# 2 Turbine Metadata
+# 2. Turbine Metadata
 
 This document contains the complete list of *Turbine* equipment and sensors metadata.
 
@@ -617,7 +617,7 @@ This document contains the complete list of *Turbine* equipment and sensors meta
 | 2939 | Turbine Protection | TURBINE_STEAM_CONSUMPTION | t/h | Turbine Steam Consumption |
 | 2940 | Turbine Protection | TURBINE_HEAT_RATE | kJ/kWh | Turbine Heat Rate |
 
-# Generator Metadata
+# 3. Generator Metadata
 
 This document contains the complete list of *Generator* equipment and sensors metadata.
 
@@ -1322,7 +1322,7 @@ This document contains the complete list of *Generator* equipment and sensors me
 | 4131 | Neutral Grounding Equipment | NEUTRAL_GROUNDING_SYSTEM_STATUS | State | Neutral Grounding System Status |
 | 4132 | Neutral Grounding Equipment | NEUTRAL_GROUNDING_HEALTH_INDEX | % | Neutral Grounding System Health Index |
 
-# Condenser Metadata
+# 4. Condenser Metadata
 
 This document contains the complete list of *Condenser* equipment and sensors metadata.
 
@@ -1563,7 +1563,7 @@ This document contains the complete list of *Condenser* equipment and sensors me
 | 6022 | Condenser Performance | CONDENSER_CRITICAL_ALARM | State | Condenser Critical Alarm |
 | 6023 | Condenser Performance | CONDENSER_EVENT_LOG_STATUS | State | Condenser Event Log Status |
 
-# Cooling Tower Metadata
+# 5. Cooling Tower Metadata
 
 This document contains the complete list of *Cooling Tower* equipment and sensors metadata.
 
@@ -1967,7 +1967,7 @@ This document contains the complete list of *Cooling Tower* equipment and sensor
 | 8609 | Cooling Tower Performance | CT_WATER_EFFICIENCY | m3/MWh | Cooling Tower Water Efficiency |
 | 8610 | Cooling Tower Performance | CT_SPECIFIC_FAN_POWER | kW/(m3/s) | Cooling Tower Specific Fan Power |
 
-# Coal Handling Metadata
+# 6. Coal Handling Metadata
 
 This document contains the complete list of *Coal Handling system* equipment and sensors metadata.
 
@@ -2697,7 +2697,7 @@ This document contains the complete list of *Coal Handling system* equipment and
 | 9789 | Magnetic Separator | MS_SYSTEM_STATUS | State | Magnetic Separator System Status |
 | 9790 | Magnetic Separator | MS_HEALTH_INDEX | % | Magnetic Separator Health Index |
 
-# Ash Handling Metadata
+# 7. Ash Handling Metadata
 
 This document contains the complete list of *Ash Handling* equipment and sensors metadata.
 
@@ -3342,7 +3342,7 @@ This document contains the complete list of *Ash Handling* equipment and sensors
 | 10713 | Dust Suppression System | DSS_SYSTEM_STATUS | State | Dust Suppression System Status |
 | 10714 | Dust Suppression System | DSS_SYSTEM_HEALTH | % | Dust Suppression System Health |
 
-# Water Treatment Metadata
+# 8. Water Treatment Metadata
 
 This document contains the complete list of *Water Treatment System* equipment and sensors metadata.
 
@@ -4316,7 +4316,7 @@ This document contains the complete list of *Water Treatment System* equipment a
 | 11992 | Degasser Tower | DG_SYSTEM_STATUS | State | Degasser Tower System Status |
 | 11993 | Degasser Tower | DG_HEALTH_INDEX | % | Degasser Tower Health Index |
 
-# Electrical System Metadata
+# 9. Electrical System Metadata
 
 This document contains the complete list of *Electrical System* equipment and sensors metadata.
 
@@ -5169,7 +5169,7 @@ This document contains the complete list of *Electrical System* equipment and se
 | 12902 | Emergency Diesel Generator | EDG_SYSTEM_STATUS | State | Emergency Diesel Generator System Status |
 | 12903 | Emergency Diesel Generator | EDG_HEALTH_INDEX | % | Emergency Diesel Generator Health Index |
 
-# Instrumentation & Control Metadata
+# 10. Instrumentation & Control Metadata
 
 This document contains the complete list of *Instrumentation & Control* equipment and sensors metadata.
 

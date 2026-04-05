@@ -1,0 +1,116 @@
+Here is the expanded plant equipment list with sub-equipment for the major systems you requested.
+
+Plant
+├── Boiler
+│    ├── Boiler Drum
+│    ├── Furnace
+│    ├── Superheater
+│    ├── Economizer
+│    ├── Feedwater System
+│    ├── Air System
+│    ├── ID Fan
+│    ├── Fuel System
+│    ├── Safety System
+│    └── Steam Output
+├── **Turbine**
+│    ├── High-Pressure (HP) Turbine
+│    ├── Intermediate-Pressure (IP) Turbine
+│    ├── Low-Pressure (LP) Turbine
+│    ├── Turbine Rotor
+│    ├── Turbine Blades (Buckets)
+│    ├── Turbine Casings
+│    ├── Steam Valves (Stop, Control, Intercept)
+│    ├── Turbine Bearings (Journal & Thrust)
+│    ├── Lubrication System
+│    │    ├── Main Oil Pump
+│    │    ├── Auxiliary Oil Pump
+│    │    ├── Oil Cooler
+│    │    └── Oil Reservoir
+│    ├── Turning Gear (Barring Gear)
+│    ├── Shaft Seals (Gland Seals)
+│    └── Steam Chest
+│
+├── **Generator**
+│    ├── Stator (Core & Windings)
+│    ├── Rotor (Field)
+│    ├── Exciter
+│    │    └── Automatic Voltage Regulator (AVR)
+│    ├── Rotor Bearings
+│    ├── Hydrogen Cooling System (for large generators)
+│    │    ├── Hydrogen Gas Control Panel
+│    │    └── Seal Oil System
+│    ├── Stator Cooling Water System
+│    ├── Generator Transformer (Isophase Bus Duct connection)
+│    └── Neutral Grounding Equipment
+│
+├── **Condenser**
+│    ├── Condenser Shell
+│    ├── Condenser Tubes (Titanium/Stainless Steel)
+│    ├── Water Boxes (Inlet & Outlet)
+│    ├── Tube Sheets
+│    ├── Hotwell
+│    ├── Air Extraction Zone/Air Cooler
+│    └── Vacuum Breaking Valve
+│
+├── **Cooling Tower**
+│    ├── Cooling Tower Structure
+│    ├── Fill Material (Splash or Film type)
+│    ├── Drift Eliminators
+│    ├── Water Distribution System (Nozzles)
+│    ├── Cooling Tower Basin (Cold Water Basin)
+│    ├── Fans (Axial or Centrifugal)
+│    │    ├── Fan Motor
+│    │    ├── Gearbox (Right-angle drive)
+│    │    └── Fan Blades
+│    ├── Make-up Water Valve
+│    ├── Bleed-off (Blowdown) System
+│    └── Louvers (Air intake)
+│
+├── Coal Handling
+│    ├── Wagon Tipplers
+│    ├── Stacker-Reclaimer
+│    ├── Crushers
+│    ├── Vibrating Screens
+│    ├── Conveyor Belts
+│    └── Magnetic Separators
+│
+├── Ash Handling
+│    ├── Bottom Ash Hopper
+│    ├── Clinker Grinder
+│    ├── Ash Slurry Pumps
+│    ├── Hydro-cyclones
+│    ├── Ash Silo
+│    └── Dust Suppression System
+│
+├── Water Treatment
+│    ├── Clarifiers
+│    ├── Filters (Sand, Activated Carbon)
+│    ├── Demineralization (DM) Plant
+│    │    ├── Cation Exchanger
+│    │    ├── Anion Exchanger
+│    │    └── Mixed Bed Exchanger
+│    ├── Reverse Osmosis (RO) System
+│    └── Degasser Tower
+│
+├── Electrical System
+│    ├── Generator Transformer
+│    ├── Station Transformer
+│    ├── Switchyard (GIS or AIS)
+│    ├── Switchgear (HV & LV)
+│    ├── Motor Control Centers (MCCs)
+│    ├── Battery Bank & Charger (DC System)
+│    └── Emergency Diesel Generator
+│
+└── Instrumentation & Control
+     ├── Distributed Control System (DCS)
+     ├── Programmable Logic Controllers (PLCs)
+     ├── Field Sensors
+     │    ├── Pressure Transmitters
+     │    ├── Temperature Transmitters (RTDs, Thermocouples)
+     │    ├── Flow Meters
+     │    └── Level Transmitters
+     ├── Actuators & Positioners
+     ├── Control Valves
+     ├── Vibration Monitoring System
+     ├── Analyzers (O2, pH, Conductivity)
+     └── Control Room Console
