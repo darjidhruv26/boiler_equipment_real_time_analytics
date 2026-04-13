@@ -5,6 +5,7 @@
 
 -- ## Equipment Tree
 -- The `equipment_tree` table stores the hierarchical structure of industrial equipment.
+Create equipment_tree (industrial hierarchy)
 
 CREATE TABLE equipment_tree
 (
@@ -25,6 +26,7 @@ ORDER BY (path, equipment_id);
 
 -- ## Tag Metadata
 -- The `tag_metadata` table stores metadata about each sensor tag.
+Create tag_metadata (production)
 
 CREATE TABLE tag_metadata
 (
@@ -45,6 +47,7 @@ ORDER BY (pi_point_id);
 
 -- ## Tag Timeseries Data
 -- The `tag_timeseries` table stores the raw time-series data for each sensor tag.
+Create production tag_timeseries (production)
 
 CREATE TABLE tag_timeseries
 (
@@ -64,6 +67,7 @@ SETTINGS index_granularity = 8192;
 
 -- ## Tag Aggregation (1-minute)
 -- The `tag_1min` table stores the aggregated time-series data at 1-minute intervals.
+Aggregation table
 
 CREATE TABLE tag_1min
 (
@@ -79,3 +83,27 @@ PARTITION BY toDate(minute)
 ORDER BY (pi_point_id, minute);
 
 -- Note: A materialized view is used to populate this table from the `tag_timeseries` table.
+
+Materialized View
+
+CREATE MATERIALIZED VIEW tag_1min_mv
+TO tag_1min
+AS
+SELECT
+    toStartOfMinute(event_time) AS minute,
+
+    pi_point_id,
+
+    avg(value) AS avg_value,
+
+    min(value) AS min_value,
+
+    max(value) AS max_value,
+
+    countIf(quality != 0) AS bad_quality
+
+FROM tag_timeseries
+
+GROUP BY
+    minute,
+    pi_point_id;

@@ -33,8 +33,8 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config cleanup.policy=delete \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
-  --config segment.bytes=1073741824
-
+  --config segment.bytes=1073741824 \
+  --config min.insync.replicas=1
 
 # For Turbine data
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -45,7 +45,8 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config cleanup.policy=delete \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
-  --config segment.bytes=1073741824
+  --config segment.bytes=1073741824 \
+  --config min.insync.replicas=1
 
 # Create the Generator topic with partitions for each equipment category
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -57,7 +58,7 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
   --config segment.bytes=1073741824 \
-  --config min.insync.replicas=2
+  --config min.insync.replicas=1
 
 # Create the Condenser topic with partitions for each equipment category
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -69,7 +70,7 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
   --config segment.bytes=1073741824 \
-  --config min.insync.replicas=2
+  --config min.insync.replicas=1
 
 # Create the Cooling Tower topic with partitions for each equipment category
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -81,7 +82,7 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
   --config segment.bytes=1073741824 \
-  --config min.insync.replicas=2
+  --config min.insync.replicas=1
 
 # Create the Coal Handling topic with partitions for each equipment category
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -93,7 +94,7 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
   --config segment.bytes=1073741824 \
-  --config min.insync.replicas=2
+  --config min.insync.replicas=1
 
 # Create the Ash Handling topic with partitions for each equipment category
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -105,7 +106,7 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
   --config segment.bytes=1073741824 \
-  --config min.insync.replicas=2
+  --config min.insync.replicas=1
 
 # Create the Water Treatment topic with partitions for each equipment category
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -117,7 +118,7 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
   --config segment.bytes=1073741824 \
-  --config min.insync.replicas=2
+  --config min.insync.replicas=1
 
 # Create the Electrical System topic with partitions for each equipment category
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -129,7 +130,7 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
   --config segment.bytes=1073741824 \
-  --config min.insync.replicas=2
+  --config min.insync.replicas=1
 
 # Create the Instrumentation & Control topic with partitions for each equipment category
 docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
@@ -141,7 +142,13 @@ docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
   --config retention.ms=604800000 \
   --config compression.type=snappy \
   --config segment.bytes=1073741824 \
-  --config min.insync.replicas=2 1
+  --config min.insync.replicas=1
+
+docker exec -it kafka /opt/kafka/bin/kafka-topics.sh --create \
+  --bootstrap-server localhost:9092 \
+  --topic grid-carbon-intensity \
+  --partitions 1 \
+  --replication-factor 1
 ```
 
 
