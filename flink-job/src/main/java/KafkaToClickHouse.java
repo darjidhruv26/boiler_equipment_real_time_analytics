@@ -19,10 +19,10 @@ public class KafkaToClickHouse {
                 StreamExecutionEnvironment.getExecutionEnvironment();
 
         Properties props = new Properties();
-        props.setProperty("bootstrap.servers", "kafka:29092");
+        props.setProperty("bootstrap.servers", "kafka:9092");
         props.setProperty("group.id", "flink-boiler");
 
-        List<String> topics = Arrays.asList("boiler-sensors", "turbine", "generator", "condenser", "cooling-tower", "coal-handling", "ash-handling", "water-treatment", "electrical-system", "instrumentation-control");
+        List<String> topics = Arrays.asList("boiler-sensors", "turbine", "generator", "condenser", "cooling-tower", "coal-handling", "ash-handling", "water-treatment", "electrical-system", "instrumentation-control", "grid-carbon-intensity");
         FlinkKafkaConsumer<String> consumer =
                 new FlinkKafkaConsumer<>(
                         topics,
