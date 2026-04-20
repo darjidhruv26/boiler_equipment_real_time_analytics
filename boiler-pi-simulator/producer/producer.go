@@ -19,7 +19,6 @@ import (
 )
 
 const (
-	kafkaBroker                 = "localhost:9092"
 	boilerTopic                 = "boiler-sensors"
 	turbineTopic                = "turbine"
 	generatorTopic              = "generator"
@@ -30,8 +29,10 @@ const (
 	waterTreatmentTopic         = "water-treatment"
 	electricalSystemTopic       = "electrical-system"
 	instrumentationControlTopic = "instrumentation-control"
+	gridCarbonTopic             = "grid-carbon-intensity"
 )
-const gridCarbonTopic = "grid-carbon-intensity"
+
+var kafkaBroker = "localhost:9092"
 
 // PartitionBalancer explicitly routes messages to the partition specified in the headers
 type PartitionBalancer struct{}
@@ -203,6 +204,11 @@ func main() {
 	go scenarioManager(ctx)
 	go plantLoadManager(ctx)
 	go gridCarbonManager(ctx)
+
+	// Allow overriding Kafka broker via environment variable for containerized environments
+	if brokerEnv := os.Getenv("KAFKA_BROKER"); brokerEnv != "" {
+		kafkaBroker = brokerEnv
+	}
 
 	fmt.Println("Connecting to Kafka:", kafkaBroker)
 
