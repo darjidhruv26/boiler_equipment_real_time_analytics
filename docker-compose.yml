@@ -16,7 +16,7 @@ services:
       
       # Simplified listeners (fixes connection issues)
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
@@ -62,6 +62,7 @@ services:
     volumes:
       - flink-checkpoints:/opt/flink/checkpoints
       - flink-savepoints:/opt/flink/savepoints
+      - ./flink-job/target:/opt/flink/jobs
 
     depends_on:
       - kafka
@@ -85,6 +86,7 @@ services:
     volumes:
       - flink-checkpoints:/opt/flink/checkpoints
       - flink-savepoints:/opt/flink/savepoints
+      - ./flink-job/target:/opt/flink/jobs 
 
     depends_on:
       - flink-jobmanager
